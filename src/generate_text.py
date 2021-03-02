@@ -6,7 +6,7 @@ class GenerateText(TextStats):
     def __init__(self, text, word = None, max_words = 500):
         super().__init__(text)
         self.word = word
-        if isinstance(max_words, str):
+        if not isinstance(max_words, int):
             self.max_words = int(max_words)
     @property
     def is_in_tokens(self):
